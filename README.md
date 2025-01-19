@@ -39,7 +39,7 @@ A simulação do fluxo completo é realizada no arquivo `index.js`.
 
 ## Diagrama de Interação
 
-[Inclua aqui o link para o diagrama PNG]
+[[LINK](https://raw.githubusercontent.com/pedrohcmoda/projeto_3/refs/heads/main/micro.png)]
 
 ## Notas de Desenvolvimento
 
