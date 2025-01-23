@@ -10,7 +10,7 @@ Este projeto foi desenvolvido por:
 
 ## Estrutura do Projeto
 
-O projeto é composto por quatro microsserviços:
+O projeto é composto por quatro simulações de microsserviços:
 
 1. Serviço de Autenticação (`Autenticacao.js`)
 2. Serviço de Catálogo de Produtos (`CatalogoProdutos.js`)

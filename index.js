@@ -1,16 +1,15 @@
-import Autenticacao from "./Autenticacao.js"
-import Pagamentos from "./Pagamentos.js"
-import CatalogoProdutos from "./CatalogoProdutos.js" 
-import Pedidos from "./Pedidos.js" 
-
+import AutenticacaoService from "./services/AutenticacaoService.js";
+import CatalogoProdutosService from "./services/CatalogoProdutosService.js";
+import PedidosService from "./services/PedidosService.js";
+import PagamentosService from "./services/PagamentosService.js";
 
 function simularFluxo() {
   console.log("Iniciando simulação do fluxo de pedido...");
 
-  const servicoAutenticacao = new Autenticacao();
-  const catalogoProdutos = new CatalogoProdutos();
-  const servicoPedidos = new Pedidos();
-  const servicoPagamentos = new Pagamentos();
+  const servicoAutenticacao = new AutenticacaoService();
+  const catalogoProdutos = new CatalogoProdutosService();
+  const servicoPedidos = new PedidosService();
+  const servicoPagamentos = new PagamentosService();
 
   // Etapa 1: Login
   console.log("\n--- Etapa 1: Autenticação ---");
@@ -28,7 +27,7 @@ function simularFluxo() {
   console.log("\n--- Etapa 3: Criação do Pedido ---");
   const itensSelecionados = [
     { ...produtos[0], quantidade: 2 },
-    { ...produtos[1], quantidade: 1 }
+    { ...produtos[1], quantidade: 1 },
   ];
 
   console.log("Verificando estoque dos itens selecionados...");
@@ -44,7 +43,7 @@ function simularFluxo() {
   // Etapa 4: Processar pagamento
   console.log("\n--- Etapa 4: Processamento do Pagamento ---");
   const pagamentoAprovado = servicoPagamentos.processarPagamento(pedido);
-  
+
   if (pagamentoAprovado) {
     servicoPedidos.atualizarStatusPedido(pedido, "pago");
   } else {
@@ -54,6 +53,5 @@ function simularFluxo() {
   console.log("\nSimulação concluída.");
 }
 
-  // Executar a simulação
-  simularFluxo();
-  
+// Executar a simulação
+simularFluxo();
