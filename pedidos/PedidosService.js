@@ -1,4 +1,4 @@
-import Pedido from "../models/Pedido.js";
+import Pedido from "./models/Pedido.js";
 
 class PedidosService {
   constructor() {
