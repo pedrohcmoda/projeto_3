@@ -1,7 +1,7 @@
-import AutenticacaoService from "./services/AutenticacaoService.js";
-import CatalogoProdutosService from "./services/CatalogoProdutosService.js";
-import PedidosService from "./services/PedidosService.js";
-import PagamentosService from "./services/PagamentosService.js";
+import AutenticacaoService from "./autenticacao/AutenticacaoService.js";
+import CatalogoProdutosService from "./catalogoProdutos/CatalogoProdutosService.js";
+import PedidosService from "./pedidos/PedidosService.js";
+import PagamentosService from "./pagamentos/PagamentosService.js";
 
 function simularFluxo() {
   console.log("Iniciando simulação do fluxo de pedido...");
