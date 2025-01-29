@@ -3,6 +3,7 @@ import CatalogoProdutosService from "./catalogoProdutos/CatalogoProdutosService.
 import PedidosService from "./pedidos/PedidosService.js";
 import PagamentosService from "./pagamentos/PagamentosService.js";
 
+// Função para simular o fluxo de um pedido
 function simularFluxo() {
   console.log("Iniciando simulação do fluxo de pedido...");
 

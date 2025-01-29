@@ -8,6 +8,7 @@ class CatalogoProdutosService {
     ];
   }
 
+  //Método para listar os produtos cadastrados
   listarProdutos() {
     console.log("[CatalogoProdutos] Listando produtos...");
     this.produtos.forEach((p) =>
@@ -18,6 +19,7 @@ class CatalogoProdutosService {
     return this.produtos;
   }
 
+  //Método para atualizar o estoque de um produto
   atualizarEstoque(idProduto, quantidade) {
     const produto = this.produtos.find((p) => p.id === idProduto);
     if (produto && produto.estoque >= quantidade) {

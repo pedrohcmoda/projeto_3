@@ -5,6 +5,7 @@ class PedidosService {
     this.pedidos = [];
   }
 
+  //Método para criar um pedido, recebendo um usuário e uma lista de itens
   criarPedido(usuario, itens) {
     const total = itens.reduce(
       (soma, item) => soma + item.preco * item.quantidade,
@@ -16,6 +17,7 @@ class PedidosService {
     return pedido;
   }
 
+  //Método para listar os pedidos cadastrados
   atualizarStatusPedido(pedido, status) {
     pedido.status = status;
     console.log(`[Pedidos] Status do pedido atualizado para '${status}'`);
